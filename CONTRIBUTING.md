@@ -138,6 +138,7 @@ deliberately maintained as the worked example of every convention at once.
   docstring's `References`, and a test against analytic ground truth where one exists.
 - New dependencies need a justification in the PR description. Heavy or optional backends
   (ray-tracing engines, PyTorch) belong in an extra, never in the core dependency list.
+- `.github/PULL_REQUEST_TEMPLATE.md` pre-fills every PR description with these rules as a checklist.
 
 ## 6. Reporting bugs
 
