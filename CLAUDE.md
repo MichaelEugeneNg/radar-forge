@@ -14,7 +14,8 @@ code that is plain, documented, and cites its source passes it.
 - **Python ≥ 3.11**, src layout. Library code lives only in `src/radar_forge/`.
 - **All configuration is TOML, in `pyproject.toml`.** Never add `setup.py`, `setup.cfg`,
   `.flake8`, `tox.ini`, `requirements*.txt`, or a standalone `ruff.toml`/`mypy.ini`.
-  `scripts/check_conventions.py` blocks these.
+  `scripts/check_conventions.py` blocks these. `.editorconfig` and `.gitattributes` are editor
+  and git metadata, not tool config, and are allowed.
 - **Run everything through `uv`**: `uv run pytest`, `uv run ruff …`. Never `pip install`.
 - **`make check` must pass before you say you are done.** It runs lint, types,
   conventions and the full test suite — the same gate as `pre-push` and CI.
