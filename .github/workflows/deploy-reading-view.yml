@@ -46,7 +46,7 @@ jobs:
       # enablement turns Pages on for the repository if it is not already
       # configured, so a fresh clone deploys without a manual visit to
       # Settings -> Pages. It is a no-op once Pages is on.
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
         with:
           enablement: true
 
