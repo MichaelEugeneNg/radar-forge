@@ -59,6 +59,12 @@ packages = ["src/radar_forge"]
 line-length = 100
 target-version = "py311"
 src = ["src", "tests"]
+# Reviews quote contributors' code verbatim; reformatting it would misquote them.
+extend-exclude = ["docs/reviews"]
+
+[tool.ruff.format]
+# LF everywhere, matching .gitattributes and .editorconfig.
+line-ending = "lf"
 
 [tool.ruff.lint]
 select = [

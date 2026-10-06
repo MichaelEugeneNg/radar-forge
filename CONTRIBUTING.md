@@ -24,6 +24,17 @@ the dev dependencies, and activates the git hooks by pointing `core.hooksPath` a
 `.githooks/`. It is safe to re-run at any time, and you should re-run it after pulling
 changes to `pyproject.toml`.
 
+To run the notebooks or the GUI scopes, add the `teaching` extra as well:
+
+```bash
+uv sync --extra dev --extra teaching
+```
+
+**Always list every extra you use.** `uv sync` makes the environment match exactly the extras
+on the command line and uninstalls the rest. `uv sync --extra teaching` on its own removes ruff,
+mypy and pytest. `./scripts/setup-dev.sh` syncs only `dev`, so it removes Jupyter. Run the line
+above again after it. Don't reach for `--all-extras`: it pulls in PyTorch and Mitsuba.
+
 Confirm it worked:
 
 ```bash
@@ -121,6 +132,7 @@ failure, not avoided it.
 | [conventions/commits.md](docs/conventions/commits.md) | Writing a commit, naming a branch, opening a PR |
 | [conventions/style.md](docs/conventions/style.md) | Writing library code — naming, **units**, docstrings, typing |
 | [conventions/testing.md](docs/conventions/testing.md) | Writing tests — tolerances, ground truth, golden data, markers |
+| [spec/data-001-formats.md](spec/data-001-formats.md) | Writing or reading a run's output files — formats, columns, units |
 | [CLAUDE.md](CLAUDE.md) | Directing an AI agent at this repo |
 
 The single best thing to read before writing your first module is
@@ -138,6 +150,7 @@ deliberately maintained as the worked example of every convention at once.
   docstring's `References`, and a test against analytic ground truth where one exists.
 - New dependencies need a justification in the PR description. Heavy or optional backends
   (ray-tracing engines, PyTorch) belong in an extra, never in the core dependency list.
+- `.github/PULL_REQUEST_TEMPLATE.md` pre-fills every PR description with these rules as a checklist.
 
 ## 6. Reporting bugs
 
