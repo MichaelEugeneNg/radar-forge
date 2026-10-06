@@ -201,6 +201,10 @@ channel axis — and `img_db` is that in decibels (§2: decibels at the boundary
 only, and the boundary here is the screen). Never feed an `img_db` back into a
 detector or an estimator; take it from the `data_*` array it came from.
 
+**On disk, the layout is data-001's.** File formats, column names, units and axis order for
+every file a run reads or writes are in
+[`spec/data-001-formats.md`](../../spec/data-001-formats.md).
+
 ---
 
 ## 4. Docstrings

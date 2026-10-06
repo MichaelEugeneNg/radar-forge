@@ -132,6 +132,7 @@ failure, not avoided it.
 | [conventions/commits.md](docs/conventions/commits.md) | Writing a commit, naming a branch, opening a PR |
 | [conventions/style.md](docs/conventions/style.md) | Writing library code — naming, **units**, docstrings, typing |
 | [conventions/testing.md](docs/conventions/testing.md) | Writing tests — tolerances, ground truth, golden data, markers |
+| [spec/data-001-formats.md](spec/data-001-formats.md) | Writing or reading a run's output files — formats, columns, units |
 | [CLAUDE.md](CLAUDE.md) | Directing an AI agent at this repo |
 
 The single best thing to read before writing your first module is
