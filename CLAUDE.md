@@ -17,6 +17,8 @@ code that is plain, documented, and cites its source passes it.
   `scripts/check_conventions.py` blocks these. `.editorconfig` and `.gitattributes` are editor
   and git metadata, not tool config, and are allowed.
 - **Run everything through `uv`**: `uv run pytest`, `uv run ruff …`. Never `pip install`.
+  `uv sync` uninstalls every extra not named, so name them all: `uv sync --extra dev --extra
+  teaching`. Never sync one extra alone, and never `--all-extras` (it pulls in torch).
 - **`make check` must pass before you say you are done.** It runs lint, types,
   conventions and the full test suite — the same gate as `pre-push` and CI.
 - **SI units, with the unit in the name**: `range_m`, `f0_hz`, `chirp_duration_s`, `rcs_dbsm`,
